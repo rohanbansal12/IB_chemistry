@@ -1,0 +1,344 @@
+\documentclass[12pt]{article}
+
+\newlength{\blackoutwidth}
+\newcommand{\blackout}[1]
+{%necessary comment
+  \settowidth{\blackoutwidth}{#1}%necessary comment
+  \rule[-0.3em]{\blackoutwidth}{1.125em}%necessary comment
+}
+
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\PassOptionsToPackage{colorlinks,linktoc=all}{hyperref}
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{cuted}
+\usepackage{capt-of}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+
+\title{Heats of Reaction and Hess's Law}
+\author{Rohan Bansal}
+\date{September 2020}
+
+\input{preamble/preamble}
+\input{preamble/preamble_math}
+\input{preamble/preamble_acronyms}
+
+\bibliography{bib}
+\begin{document}
+
+\maketitle
+
+\section{Background}
+	The experiment that was conducted was done to determine the heat of reaction for the combustion of Magnesium. The heat of reaction is denoted by $\Delta H_{rxn}$ and is equivalent to the heat or enthalpy change of a reaction. It can also be defined in terms of enthalpy--the difference in enthalpy between the products and reactants. This is equivalent to the quantity of heat transferred from system to surroundings (or vice versa) during a reaction that is conducted at constant pressure. Enthalpy is a state function, which means its value will be equal no matter the path taken from the beginning to the end. This would be in contrast to heat, which would undoubtedly depend on the steps that were taken to get from Point A to Point B. 
+
+	Magensium reacts brilliantly with oxygen to produce a dazzling white flame and an immense amount of heat. The combustion reaction has been utilized for various industrial processes over the past few centuries including in airplane engines, "flash powder", and flashbulbs. The substance is still used for flares and fireworks because of its ability to generate large sparks with intriguing displays. Because of the large amount of heat generated, it is not practical to investigate the enthalpy change of the reaction directly in the lab. Instead, Hess's Law allows scientists to indirectly calculate the enthalpy change.
+
+	Hess's Law simply states that if an overall reaction can be represented in a series of steps, the overall enthalpy change of the primary reaction is equivalent to the sum of enthalpy changes within the corresponding steps ~\parencite{chemistry_libretexts_2020}. In this experiment, our primary reaction is:
+
+	\begin{equation}
+	\label{eq:magnesium-combustion}
+	Mg(s) + \frac{1}{2}O_2(g) \rightarrow MgO(s) + heat
+	\end{equation}
+
+	We can instead utilize three separate equations with the help of Hess's Law and calculate the enthalpy of the Magnesium Combustion reaction:
+
+	\begin{equation}
+	\label{eq:mg-plus-hcl}
+	Mg(s) + 2HCl(aq) \rightarrow MgCl_2(aq) + H_2(g) 
+	\end{equation}
+
+	\begin{equation}
+	\label{eq:mgo-plus-hcl}
+	MgO(s) + 2HCl(aq) \rightarrow MgCl_2(aq) + H_2O(l) 
+	\end{equation}
+
+	\begin{equation}
+	\label{eq:water}
+	H_2(g) + \frac{1}{2}O_2(g) \rightarrow H_2O(l)
+	\end{equation}
+
+	By flipping the second equation (which Hess's Law also allows for as long as the sign of the enthalpy change is also flipped), these three equations can be added together to generate the initial combustion reaction and hence find the total enthalpy change.
+
+	Hess's Law has a variety of important applications, including the ability to generate enthalpy changes for reactions that otherwise are highly impractical to perform in a lab setting. The law allows for easy stoichiometric alterations additionally, and thus quantities can easily be manipulated to get the desired results. Although Hess's Law is predicated on the extremely fundamental concept of the Law of Conservation of Energy, its impact on chemistry has been profound ~\parencite{the_fact_factor_2020}.
+
+\section{Lab Safety Rules}
+
+	\begin{enumerate}
+		\item Check odors only if instructed to do so by gently wafting some of the vapor towards the nose with the hands.
+		\item Never return unused chemicals to the original bottle. Be careful to take only what you actually need.
+		\item Keep flammable materials away from any open flames or sources of heat
+		\item Ensure that corrosive substances are not spilled near skin or splashed on eyes. Wear goggles at all times to ensure no substance enters the eyes.
+		\item Rinse eyes and wash skin immediately in the case of inadvertent contact with harmful chemical substances
+	\end{enumerate}
+
+\section{Data}
+
+\subsection{Qualitative Data}
+	\begin{enumerate}
+		\item The Magnesium ribbon was malleable, silver, and slightly lustrous.
+		\item The 1M HCl was a clear liquid
+		\item On addition of the Magnesium Ribbon to the hydrochloric acid, an audible bubbling sound was heard.
+		\item The Magnesium dissolved in the acid and was barely present after the reaction appeared to be complete.
+		\item The Magnesium Oxide was a fairly coarse white powder
+		\item The Magnesium Oxide also reacted with the acid in the presence of a bubbling sound and seemed to disappear in a similar fashion
+	\end{enumerate}
+
+\subsection{Quantitative Data}
+Raw data for the reaction between Mg Ribbon and 1 M HCl:
+
+	\begin{center}
+	\begin{tabular}{ |m{4cm}|m{4cm}|m{2cm}|m{2cm}|m{2cm}| }
+	\hline
+	Mass of Calorimeter ($\pm 0.001g$) & Mass of Calorimeter + HCl ($\pm 0.001g$) & Mass of Mg ($\pm 0.001g$) & Initial Temp. ($\pm 0.05 \degree C$) & Final Temp. ($\pm 0.05 \degree C$)\\
+	\hline
+	37.59 & 52.15 & .02945 & 24.8 & 33.9 \\
+	37.96 & 52.52 & .03705 & 24.6 & 35.3 \\
+	 \hline
+	\end{tabular}
+	\end{center}
+
+\vspace{30mm}
+
+Raw data for the reaction between MgO Powder and 1 M HCl:
+	\begin{center}
+	\begin{tabular}{ |m{4cm}|m{4cm}|m{2cm}|m{2cm}|m{2cm}| }
+	\hline
+	Mass of Calorimeter ($\pm 0.001g$) & Mass of Calorimeter + HCl ($\pm 0.001g$) & Mass of MgO ($\pm 0.001g$) & Initial Temp. ($\pm 0.05 \degree C$) & Final Temp. ($\pm 0.05 \degree C$)\\
+	\hline
+	38.65 & 53.29 & .22 & 24.7 & 28.6 \\
+	38.05 & 52.57 & .20 & 24.7 & 29.1 \\
+	 \hline
+	\end{tabular}
+	\end{center}
+
+\subsection{Calculations}
+For Trial 1 of the Mg Ribbon Reactions:
+
+\begin{equation*}
+\textit{Mass of HCl: } 52.15 - 37.59 = 14.56 \pm .002 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\textit{Total Reactant Mass: } 14.56 + .02945 = 14.59 \pm .003 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\Delta T = 33.9 - 24.8 = 9.1 \pm .1 \degree C
+\end{equation*}
+\begin{equation*}
+\textit{Heat (q) } = m \times s \times \Delta T = 14.59 \pm .003 \textit{ g} \times 4.18 \frac{J}{g \cdot \degree C} \times 9.1 \pm .1 \degree C = 554.97 J
+\end{equation*}
+\begin{equation*}
+\frac{.003}{14.59} \times 100 = .021\% \textit{ uncertainty g Reactants}
+\end{equation*}
+\begin{equation*}
+\frac{.1}{9.1} \times 100 = 1.10\% \textit{ uncertainty } \degree C \textit{ } \Delta T
+\end{equation*}
+\begin{equation*}
+1.10\% + .021\% = 1.12\% \textit{ uncertainty J}
+\end{equation*}
+\begin{equation*}
+\frac{1.12}{100} \times 554.97 = 6.22 \textit{ absolute uncertainty J}
+\end{equation*}
+\begin{equation*}
+.02945 \pm .001 \textit{ g Mg } \times \frac{1 \textit{ mol Mg}}{24.31 \pm .005 \textit{ g Mg}} = .00121 \textit{ mol Mg}
+\end{equation*}
+\begin{equation*}
+\frac{.001}{.02945} \times 100 = 3.40\% \textit{ uncertainty g Mg}
+\end{equation*}
+\begin{equation*}
+\frac{.005}{24.31} \times 100 = .02\% \textit{ uncertainty g Mg}
+\end{equation*}
+\begin{equation*}
+3.40\% + .02\% = 3.42\% \textit{ uncertainty mol Mg}
+\end{equation*}
+\begin{equation*}
+\frac{3.42}{100} \times .00121 = 4.1 \times 10^{-5} \textit{ absolute uncertainty mol Mg}
+\end{equation*}
+\begin{equation*}
+554.97 \pm 6.22 \textit{ J } \times \frac{1 \textit{ kJ}}{1000 \textit{ J}} = .555 \pm .00622 \textit{ kJ}
+\end{equation*}
+\begin{equation*}
+\frac{.555 \pm .00622 \textit{ kJ}}{.00121 \pm 4.1 \times 10^{-5} \textit{ mol}} = 459 \frac{kJ}{mol}
+\end{equation*}
+\begin{equation*}
+\frac{.00622}{.555} \times 100 = 1.12\% \textit{ uncertainty kJ}
+\end{equation*}
+\begin{equation*}
+\frac{4.1 \times 10^{-5}}{.00121} \times 100 = 3.42\% \textit{ uncertainty mol Mg}
+\end{equation*}
+\begin{equation*}
+1.12\% + 3.42\% = 4.54\% \textit{ uncertainty } \frac{kJ}{mol}
+\end{equation*}
+\begin{equation*}
+\frac{4.54}{100} \times 459 = 20.8 \textit{ absolute uncertainty } \frac{kJ}{mol}
+\end{equation*}
+
+\begin{equation*}
+\textit{Thus, final enthalpy for Trial \#1 is: } \mathbf{-459 \pm 20.8 \frac{kJ}{mol}}
+\end{equation*}
+\begin{equation*}
+\textit{(enthalpy is negative of the heat released as the reaction is exothermic)}
+\end{equation*}
+
+Using same steps for Trial \#2:
+\begin{equation*}
+\textit{Mass of HCl: } 14.56 \pm .002 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\textit{Total Reactant Mass: } 14.60 \pm .003 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\Delta T = 10.7 \pm .1 \degree C
+\end{equation*}
+\begin{equation*}
+q = 653.00 \pm 6.20 \textit{ J}
+\end{equation*}
+\begin{equation*}
+\textit{Results in: } .00152 \pm 4.1 \times 10^{-5} \textit{ mol Mg and } .653 \pm .00620 \textit{ kJ}
+\end{equation*}
+\begin{equation*}
+\textit{Final enthalpy for Trial \#2 is: } \mathbf{-430 \pm 15.7 \frac{kJ}{mol}}
+\end{equation*}
+
+Combining 2 Trials:
+\begin{equation*}
+\textit{Average Enthalpy for Reaction \#1:} \frac{(-459 \pm 20.8)+(-430 \pm 15.7)}{2} = \mathbf{-444.5 \pm 18.3 \frac{kJ}{mol}}
+\end{equation*}
+
+Using same steps outlined above for Trial \#1 of MgO Reaction:
+\begin{equation*}
+\textit{Mass of HCl: } 14.65 \pm .002 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\textit{Total Reactant Mass: } 14.87 \pm .003 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\Delta T = 3.9 \pm .1 \degree C
+\end{equation*}
+\begin{equation*}
+q = 242.41 \pm 6.25 \textit{ J}
+\end{equation*}
+\begin{equation*}
+\textit{Results in: } .00546 \pm 2.5 \times 10^{-5} \textit{ mol MgO and } .242 \pm .00625 \textit{ kJ}
+\end{equation*}
+\begin{equation*}
+\textit{Final enthalpy for Trial \#1 is: } \mathbf{-44.3 \pm 1.35 \frac{kJ}{mol}}
+\end{equation*}
+
+Using same steps for Trial \#2:
+\begin{equation*}
+\textit{Mass of HCl: } 14.52 \pm .002 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\textit{Total Reactant Mass: } 14.72 \pm .003 \textit{ g}
+\end{equation*}
+\begin{equation*}
+\Delta T = 4.4 \pm .1 \degree C
+\end{equation*}
+\begin{equation*}
+q = 270.73 \pm 6.21 \textit{ J}
+\end{equation*}
+\begin{equation*}
+\textit{Results in: } .00496 \pm 2.5 \times 10^{-5} \textit{ mol MgO and } .271 \pm .00621 \textit{ kJ}
+\end{equation*}
+\begin{equation*}
+\textit{Final enthalpy for Trial \#2 is: } \mathbf{-54.6 \pm 1.53 \frac{kJ}{mol}}
+\end{equation*}
+
+Combining 2 Trials:
+\begin{equation*}
+\textit{Average Enthalpy for Reaction \#2:} \frac{(-44.3 \pm 1.35)+(-54.6 \pm 1.53)}{2} = \mathbf{-49.5 \pm 1.4 \frac{kJ}{mol}}
+\end{equation*}
+
+Based on Accepted Literature Values:
+\begin{equation*}
+\textit{Enthalpy for Reaction \#3:} \mathbf{-285.8 \pm .05 \frac{kJ}{mol}}
+\end{equation*}
+
+As discussed previously (based on Hess's Law):
+\begin{equation*}
+\label{eq:enthalpy-sum}
+\Delta H_c = \Delta H_1 - \Delta H_2 + \Delta H_3
+\end{equation*}
+\begin{equation*}
+\Delta H_c = (-444.5 \pm 18.3) - (-49.5 \pm 1.4) + (-285.8 \pm .05)
+\end{equation*}
+\begin{equation*}
+\Delta H_c = \mathbf{-680.8 \pm 19.8 \frac{kJ}{mol}}
+\end{equation*}
+
+To Calculate Percent Error:
+\begin{equation*}
+\textit{Theoretical } \Delta H_c = -601.8 \frac{kJ}{mol}
+\end{equation*}
+\begin{equation*}
+\textit{Percent Error: } \left|\frac{-680.8 - (-601.8)}{-601.8}\right| \times 100 = \mathbf{13.1\%}
+\end{equation*}
+\begin{equation*}
+\textit{Percent Uncertainty: } \left|\frac{19.8}{-680.8}\right| \times 100 = \mathbf{2.9\%}
+\end{equation*}
+Thus, the theoretical value was outside of the range of uncertainty for our calculated result.
+
+\subsection{Processed Data}
+Reaction between Mg Ribbon and 1 M HCl:
+
+	\begin{center}
+	\begin{tabular}{ |m{4cm}|m{4cm}| }
+	\hline
+	Trial & $\Delta H^{\degree}_{rxn}$ ($\frac{kJ}{mol}$) \\
+	\hline
+	1 & $-459 \pm 20.8$ \\
+	2 & $-430 \pm 15.7$ \\
+	\hline
+	Average & $-444.5 \pm 18.3$ \\
+	 \hline
+	\end{tabular}
+	\end{center}
+
+Reaction between MgO Powder and 1 M HCl:
+
+	\begin{center}
+	\begin{tabular}{ |m{4cm}|m{4cm}| }
+	\hline
+	Trial & $\Delta H^{\degree}_{rxn}$ ($\frac{kJ}{mol}$) \\
+	\hline
+	1 & $-44.3 \pm 1.35$ \\
+	2 & $-54.6 \pm 1.53$ \\
+	\hline
+	Average & $-49.5 \pm 1.4$ \\
+	 \hline
+	\end{tabular}
+	\end{center}
+
+Final Values:
+	\begin{center}
+	\begin{tabular}{ |m{4cm}|m{4cm}| }
+	\hline
+	Reaction & $\Delta H^{\degree}_{rxn}$ ($\frac{kJ}{mol}$) \\
+	\hline
+	1 & $-444.5 \pm 18.3$ \\
+	2 & $-49.5 \pm 1.4$ \\
+	3 & $-285.8 \pm .05$ \\
+	\hline
+	Final ($\Delta H_1 - \Delta H_2 + \Delta H_3$) & $-680.8 \pm 19.8$ \\
+	 \hline
+	\end{tabular}
+	\end{center}
+
+\section{Conclusion}
+The overall enthalpy change calculated for the combustion of Oxygen using Hess's Law was $-680.8 \frac{kJ}{mol}$, which differed significantly from the accepted value of $-601.8 \frac{kJ}{mol}$. This result had a percent error of $13.1\%$, which is well outside of the potential uncertainty of the calculated value ($2.9\%$). Although the final results were not close to the theoretical value, the overall experiment was precise because of the similarity in results for each of the trials involved. Furthermore, after reading the literature values for the individual reactions involved, it became clear that Reaction \#2 was the primary cause of the final discrepancy. Reaction \#1's result was within .5\% of the theoretical result and Reaction \#3 was obviously calculated with literature values alone. However, the reaction involving $MgO$ and $HCl$ has an accepted enthalpy of nearly $-130 \frac{kJ}{mol}$, while the experiment indicated a value of around $-45 \frac{kJ}{mol}$. Despite this difference, because of the similarity in values for the two trials utilized in this reaction, more trials would not have alleviated this error. It is clear that the procedure followed did not produce accurate results.
+
+\subsection{Evaluating Procedure}
+A multitude of aspects within the procedure were potential contributors to the inaccurate results and caused the systemic error observed in the experiment. Primarily, the multiple holes in the calorimeter meant that heat undoubtedly was dissipated in the duration of the experiment and thus the recorded temperatures did not reflect the actual heat emitted during the exothermic reaction. This could obviously be remedied by a better-isolated calorimeter and with special care given to not removing the lid for long periods of time. This also ties into the issue of verifying when the experiment had finished. Because of the opaque nature of the calorimeter, it was difficult to determine when the reaction had gone to completion, leading to a necessity for removing the lid. This subsequently meant that a significant amount of heat was allowed to escape the contained and skewed the experiment results. What is particularly intriguing about these potential issues was that they seemed to have a profound impact on the results of Reaction \#2 but not on \#1. This could be for a variety of reasons, most notably that Magnesium reacted more readily with the hydrochloric acid and continued to display temperature changes during the entirety of the interaction. Additionally, the specific heat of the substance was taken to be the same as that of water ($4.18 \frac{J}{g \cdot K}$), which is obviously not completely accurate. However, the majority of the reactants were present in relatively small quantities when compared to the water, and thus this was probably not a major contributor to the error observed. This could only be properly determined through extensive experimentation, something which was outside of the scope of the experiment detailed here. Impurities present in the Magesium or acid solution could also contribute to lesser quantities than those utilized for the calculations, further adding a level of error to the final results. In an ideal scenario, the substances would be kept isolated from any the surroundings to ensure that contamination was not possible. There was also some confusion from the procedure which did not clearly indicate whether the entirety of the $Mg$ Ribbon and the $MgO$ powder should have been removed from the container for the reaction to be complete. According to the reaction, these substances were the limiting reagents and thus should have been entirely consumed, but that did not seem to be the case in the actual experiment. This should have been described more clearly in the procedure and could have contributed to the disparity in results.
+
+\subsection{Improving Investigation}
+As talked about above, there were some major issues with the lab that could have interfered with the generated results. The relatively consistent preciseness in the results does tend to indicate a lack of significant random error, however, there were still potential factors that could have potentially been alleviated through a combination of better procedure guidelines and improved equipment. The potential contamination was a major concern during the experiment, and ensuring that the proper quantities of acid are measured out during the dilution process and isolating substances such as magnesium which can react slightly with the air could have had a profound impact on the quality of obtained results. Additionally, the digital thermometer turned off a few times during the experiment and was inadvertently touched during the stirring of the reactants in the calorimeter, which led to pauses in data collection and monitoring. This could also have been alleviated with a mercury thermometer with a smaller measuring rod to prevent any external fluctuations of the temperature.
+
+The experiment performed and explained here is an extension of Hess's Law which has a variety of impacts in chemistry, medicine, and industry. The emission of heat from reactions can help scientists find new approaches to optimize the function of combustion engines, explosives, or cooling devices. Further experiments are crucial in finding these new substances both for their practical applications, but also their assistance in determining theoretical explanations for chemical properties. It would intriguing to compare heat of reactions for other alkaline earth metals to determine what factors have direct correlations to the exothermic nature of metallic combustion.
+\printbibliography
+\end{document}{}

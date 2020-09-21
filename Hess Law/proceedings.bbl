@@ -1,0 +1,58 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{chemistry_libretexts_2020}{misc}{}
+      \list{publisher}{1}{%
+        {Libretexts}%
+      }
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemistry LibreTexts}
+      \field{month}{8}
+      \field{title}{Hess's Law}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Thermodynamics/Thermodynamic_Cycles/Hesss_Law
+      \endverb
+      \verb{url}
+      \verb https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Thermodynamics/Thermodynamic_Cycles/Hesss_Law
+      \endverb
+    \endentry
+    \entry{the_fact_factor_2020}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Fact Factor}
+      \field{month}{1}
+      \field{title}{Hess's Law: Statement, explanation, applications and problems}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://thefactfactor.com/facts/pure_science/chemistry/physical-chemistry/hesss-law-and-its-applications/6881/
+      \endverb
+      \verb{url}
+      \verb https://thefactfactor.com/facts/pure_science/chemistry/physical-chemistry/hesss-law-and-its-applications/6881/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
